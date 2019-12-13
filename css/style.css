@@ -1,0 +1,104 @@
+html {
+  background: #009e5f;
+  color: rgb(247, 244, 244);
+  font-family: 'Libre Baskerville';
+}
+
+h1 {
+  font-family: 'Lilita One';
+  font-size: 3.25rem;
+}
+
+.branding {
+  display: flex;
+  margin-bottom: 2.5rem;
+}
+
+.branding svg {
+  width: 4rem;
+  color: white;
+  margin-right: 1rem;
+}
+.hero {
+  z-index: 999;
+    position: relative;
+    text-align: center;
+    min-height: 90vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.fun-btn {
+  font-family: 'Lilita One', sans-serif;
+  padding: .5rem 1.25rem;
+  background: linear-gradient(to right, #009e5f 50%, white 50%);
+  transition: all 200ms ease;
+  backface-visibility: hidden;
+  background-size: 205% 100%;
+  background-position: right bottom;
+  font-weight: 700;
+  border: 1px solid white;
+  border-radius: 4px;
+  color: rgb(2, 133, 80);
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.fun-btn:hover {
+  color: white;
+  text-decoration: underline;
+  background-position: left bottom;
+  outline: 0;
+
+}
+
+.pulse {
+    z-index: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    /* max-width: 15rem; */
+    width: 75%;
+    border-radius: 50%;
+}
+
+.pulse circle {
+    fill: rgb(2, 133, 80);
+    transform: scale(0);
+    opacity: 0;
+    transform-origin: 50% 50%;
+    animation: pulse 3s cubic-bezier(0.5, 0.5, 0, 1) infinite;
+    /* 
+            &:nth-child(2) {
+                fill: #7fc6a4;
+                animation: pulse 2s 0.75s cubic-bezier(0.5, 0.5, 0, 1);
+            }
+    
+            &:nth-child(3) {
+                fill: #e5f77d;
+                animation: pulse 2s 1.5s cubic-bezier(0.5, 0.5, 0, 1);
+            } */
+}
+
+.pulse circle:nth-child(2) {
+  fill: rgb(215, 30, 5);
+  animation: pulse 3s 2s cubic-bezier(0.5, 0.5, 0, 1);
+}
+
+.pulse circle:nth-child(3) {
+    fill: #e5f77d;
+    animation: pulse 3s 3.5s cubic-bezier(0.5, 0.5, 0, 1);
+}
+
+@keyframes pulse {
+    25% {
+        opacity: 0.4;
+    }
+
+    100% {
+        transform: scale(2);
+    }
+}
